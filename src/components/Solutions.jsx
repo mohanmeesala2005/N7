@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react'
+import cardImage from '../assets/mainPage.jpg'
 
 export default function Solutions() {
   const solutions = [
@@ -6,68 +7,82 @@ export default function Solutions() {
       id: 1,
       title: 'Core Banking',
       description: 'Helps your financial institution automate and optimize banking operations, manage employees, improve customer experience, and ensure full regulatory compliance.',
-      icon: '🏦',
     },
     {
       id: 2,
       title: 'Digital Payments',
       description: 'End-to-end payment processing solutions for secure, fast, and reliable digital transactions across all channels.',
-      icon: '💳',
     },
     {
       id: 3,
       title: 'Risk Management',
       description: 'Comprehensive fraud detection and risk mitigation tools to protect your organization and customers.',
-      icon: '🛡️',
     },
     {
       id: 4,
       title: 'Analytics & Insights',
       description: 'Advanced data analytics and business intelligence tools for informed decision-making.',
-      icon: '📊',
     },
     {
       id: 5,
       title: 'API Platform',
       description: 'Scalable API infrastructure for seamless integration with third-party systems and services.',
-      icon: '🔌',
     },
     {
       id: 6,
       title: 'Compliance Suite',
       description: 'Automated compliance management to meet regulatory requirements across jurisdictions.',
-      icon: '✅',
     },
   ]
 
   return (
     <section id="solutions" className="py-20 md:py-32 bg-dark-bg">
       <div className="container-wide">
-        {/* Section Header */}
-        <div className="max-w-2xl mb-16">
-          <h2 className="section-title mb-6">Our Solutions</h2>
-          <p className="section-subtitle">
-            Explore our comprehensive suite of banking and financial technology solutions
-          </p>
-        </div>
-
-        {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution) => (
-            <div
-              key={solution.id}
-              className="bg-dark-card p-8 rounded-lg border border-gray-700 hover:border-accent-blue transition-all duration-300 hover:shadow-lg hover:shadow-accent-blue/20 group"
-            >
-              <div className="text-5xl mb-4">{solution.icon}</div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-accent-blue transition-colors">
-                {solution.title}
-              </h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">{solution.description}</p>
-              <a href="#" className="inline-flex items-center text-accent-blue hover:text-accent-purple transition-colors">
-                Learn More <ArrowRight size={16} className="ml-2" />
-              </a>
+        <div className="grid gap-12 lg:grid-cols-[360px_minmax(0,1fr)] items-start">
+          {/* Left Column: Section Header */}
+          <div className="lg:sticky lg:top-24">
+            <div className="max-w-sm lg:max-w-none">
+              <h2 className="section-title mb-6">All of our solutions are tailor-made to your needs</h2>
+              <button className="btn-primary inline-flex items-center mx-3 space-x-2">
+                <span>REQUEST DEMO</span>
+                <ArrowRight size={18} />
+            </button>
             </div>
-          ))}
+          </div>
+
+          {/* Right Column: Solutions Grid */}
+          <div>
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
+              {solutions.map((solution) => (
+                <div
+                  key={solution.id}
+                  className="group overflow-hidden rounded-3xl border border-[#0b2a38] bg-[#02131d] transition-shadow duration-300 hover:shadow-[0_25px_45px_-15px_rgba(0,191,255,0.25)]"
+                >
+                  
+
+                  <div className="p-6 md:p-7">
+                    <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
+                    <p className="text-gray-400 leading-relaxed mb-6 text-sm">
+                      {solution.description}
+                    </p>
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-3 text-[#00bfff] uppercase tracking-[2px] text-sm font-medium relative group/link"
+                    >
+                      <span className="relative">
+                        Learn More
+                        <span className="absolute left-0 -bottom-2 h-[2px] w-10 bg-[#00bfff] transition-all duration-300 group-hover/link:w-full"></span>
+                      </span>
+                      <ArrowRight
+                        size={18}
+                        className="transition-transform duration-300 group-hover/link:translate-x-1"
+                      />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

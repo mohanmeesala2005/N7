@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import heroImage from '../assets/hero-image.svg'
+import heroImage from '../assets/mainPage.jpg'
 
 export default function Hero() {
   return (
@@ -14,32 +14,33 @@ export default function Hero() {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="section-title">
-                All of our solutions are tailor-made to your needs
+                The new foundation of modern banking
               </h1>
               <p className="section-subtitle">
-                Comprehensive banking and financial technology solutions designed for modern enterprises
+                We drive innovation and growth, provide seamless customer experience and operational excellence
               </p>
             </div>
 
-            <button className="btn-primary inline-flex items-center space-x-2">
+            <button className="btn-primary inline-flex items-center mx-3 space-x-2">
               <span>REQUEST DEMO</span>
               <ArrowRight size={18} />
             </button>
 
+            <button className="btn-primary inline-flex items-center mx-3 space-x-2">
+              <span>CONTACT US</span>
+              <ArrowRight size={18} />
+            </button>
+
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
+            <div className="grid grid-cols-1   gap-8 pt-4">
               <div>
-                <div className="text-3xl font-bold text-accent-blue">500+</div>
-                <p className="text-sm text-gray-400">Enterprise Clients</p>
+                <div className="text-3xl font-bold text-accent-blue">Trusted By:</div>
+                <span className="text-sm text-gray-400">SHELLS </span>
+                <span className="text-sm text-gray-400">SmartFinder </span>
+                <span className="text-sm text-gray-400">Zoomer </span>
+                <span className="text-sm text-gray-400">WAVESMARATHON </span>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-accent-blue">50+</div>
-                <p className="text-sm text-gray-400">Countries</p>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent-blue">15+</div>
-                <p className="text-sm text-gray-400">Years Experience</p>
-              </div>
+              
             </div>
           </div>
 
