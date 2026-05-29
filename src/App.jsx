@@ -26,8 +26,8 @@ function App() {
         <Hero />
         <Solutions />
         <Features />
-        <Testimonials />
         <CTA />
+        <Testimonials />
       </main>
       <Footer />
     </div>
